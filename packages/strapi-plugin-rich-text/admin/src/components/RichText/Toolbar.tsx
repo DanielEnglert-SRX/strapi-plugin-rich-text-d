@@ -8,7 +8,7 @@ import {
   ArrowRight,
   Bold,
   Italic,
-  StrikeThrough,
+  ChevronUp,
   Underline,
   Link,
   Minus,
@@ -66,8 +66,8 @@ export default function Toolbar({ editor }: ToolbarProps) {
                   onClick={() => editor.chain().focus().toggleUnderline().run()}
                 />
                 <IconButton
-                  icon={<StrikeThrough />}
-                  label="Strike"
+                  icon={<ChevronUp />}
+                  label="Strikey"
                   onClick={() => editor.chain().focus().toggleStrike().run()}
                   disabled={!editor.can().chain().focus().toggleStrike().run()}
                   className={editor.isActive("strike") ? "is-active" : ""}
